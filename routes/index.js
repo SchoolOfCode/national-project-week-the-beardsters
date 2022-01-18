@@ -1,12 +1,12 @@
 import express from "express";
-const router = express.router();
+const router = express.Router();
 
 import { getChallenge, getChallengesByType } from "../models/index";
 
 //GET RANDOM CHALLENGE
 
 router.get("/", async (req, res) => {
-  const randomChallenge = await getChallenge();
+  const randomChallenge = await getChallenge(req.body);
   res.json({
     success: true,
     message: "Random challenge found",
