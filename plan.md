@@ -16,11 +16,8 @@
 9. CREATE TABLE INSIDE POSTGRESQL (Create function to export as scripts)
 10. CREATE COLUMNS/ROWS (Create function to export as scripts)
 11. POPULATE TABLE (Create function to export as scripts)
+12. Create Routes
+13. Create Models folder
+14. Deploy it to Heroku
 
-- CREATING HTTP REQUEST FROM REACT TO NODE
 
-- CREATE ROUTES
-
-- CREATE MODELS FOLDER
-
-- DEPLOY IT TO HEROKU
