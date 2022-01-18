@@ -1,0 +1,24 @@
+{
+  "name": "national-project-week-the-beardsters",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SchoolOfCode/national-project-week-the-beardsters.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SchoolOfCode/national-project-week-the-beardsters/issues"
+  },
+  "homepage": "https://github.com/SchoolOfCode/national-project-week-the-beardsters#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
