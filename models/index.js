@@ -1,9 +1,9 @@
-import query from "../index.js";
+import query from "../db/index.js";
 
 export async function getChallenge() {
   const randomChallenge = Math.floor(Math.random() * 2);
   const challengesData = await query(
-    `SELECT * FROM challenges JOIN answers on challenges.id = answers.id WHERE id = $1;`[
+    `SELECT * FROM challenges JOIN answers on challenges.id = answers.id WHERE challenges.id = $1;`, [
       randomChallenge
     ]
   );
@@ -12,8 +12,17 @@ export async function getChallenge() {
 
 export async function getChallengesByType(type) {
   const challengesType = await query(
-    `SELECT * FROM challenges JOIN answers WHERE type ILIKE '%'|| $1 || '%'`,
+    `SELECT * FROM challenges JOIN answers on challenges.id = answers.id WHERE type LIKE '%'|| $1 || '%'`,
     [type]
   );
   return challengesType.rows;
 }
+
+
+// export async function getChallengesByType(type) {
+//   const challengesType = await query(
+//     `SELECT * FROM challenges JOIN answers WHERE type LIKE '%'|| $1 || '%'`,
+//     [type]
+//   );
+//   return challengesType.rows;
+// }
