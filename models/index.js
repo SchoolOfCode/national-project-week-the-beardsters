@@ -19,11 +19,3 @@ export async function getChallengesByType(type) {
   return challengesType.rows;
 }
 
-
-// export async function getChallengesByType(type) {
-//   const challengesType = await query(
-//     `SELECT * FROM challenges JOIN answers WHERE type LIKE '%'|| $1 || '%'`,
-//     [type]
-//   );
-//   return challengesType.rows;
-// }
