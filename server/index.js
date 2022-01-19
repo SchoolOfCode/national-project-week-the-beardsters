@@ -2,12 +2,13 @@
 
 import { getChallenge, getChallengesByType } from "../models/index.js";
 import express from "express";
+import cors from "cors";
 const router = express.Router();
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-
+app.use(cors());
 
 app.get("/", async (req, res) => {
   const randomChallenge = await getChallenge();
